@@ -235,7 +235,8 @@ for(i in 1:nrow(GridAlpha)) {
   
   InstSummar %>% 
     select(Group, Time, Index, Median, IQR) %>% 
-    write.csv(file = paste0(DirOut, "/primary/", iName, ".csv"))
+    write.csv(file = paste0(DirOut, "/primary/", iName, ".csv"), 
+              row.names = FALSE)
   
 }
 
