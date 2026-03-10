@@ -233,6 +233,10 @@ for(i in 1:nrow(GridAlpha)) {
                           theme(panel.grid.major = element_blank(), 
                                 panel.grid.minor = element_blank())
   
+  InstSummar %>% 
+    select(Group, Time, Index, Median, IQR) %>% 
+    write.csv(file = paste0(DirOut, "/primary/", iName, ".csv"))
+  
 }
 
 # Save plots 
